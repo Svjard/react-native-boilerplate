@@ -32,14 +32,6 @@ steps:
     provisioningProfileLocation: 'secureFiles'
     provProfileSecureFile: 'dev.mobileprovision'
 
-- task: ios-bundle-version@1
-  displayName: "Set versions"
-  inputs:
-    sourcePath: 'src/ios/Boilerplate/Info.plist'
-    versionCodeOption: 'buildid'
-    versionCode: '$(Build.BuildId)'
-    printFile: true
-
 - task: Xcode@5
   displayName: "Build Mobile Application"
   inputs:
